@@ -5,6 +5,12 @@ import { tools as tools2 } from '../data2';
 import { Tool } from '../types';
 import { Helmet } from 'react-helmet';
 
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void;
+  }
+}
+
 const Tools = () => {
   const [searchParams] = useSearchParams();
   const [searchQuery, setSearchQuery] = useState('');
@@ -25,6 +31,15 @@ const Tools = () => {
 
     return matchesSearch && matchesCategory;
   });
+
+  useEffect(() => {
+    // 发送页面浏览事件
+    window.gtag?.('event', 'page_view', {
+      page_title: 'AI Tools Collection - Browse & Compare Tools | AI Magic Box',
+      page_location: window.location.href,
+      page_path: window.location.pathname
+    });
+  }, []);
 
   return (
     <>

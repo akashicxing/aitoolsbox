@@ -10,8 +10,16 @@
       gtag('js', new Date());
 
       gtag('config', 'G-1YFRL1YWL1', {
-        page_path: window.location.pathname,
-        send_page_view: true
+        send_page_view: false // 禁用自动页面浏览量发送
+      });
+
+      // 监听路由变化并手动发送页面浏览量
+      window.addEventListener('popstate', function() {
+        gtag('event', 'page_view', {
+          page_title: document.title,
+          page_location: window.location.href,
+          page_path: window.location.pathname
+        });
       });
     </script>
     <link rel="icon" type="image/svg+xml" href="/logo.svg" />
