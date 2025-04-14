@@ -3,40 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1YFRL1YWL1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1CH7DQ3P91"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'G-1YFRL1YWL1', {
-        send_page_view: false // 禁用自动页面浏览量发送
-      });
-
-      // 监听路由变化并手动发送页面浏览量
-      window.addEventListener('locationchange', function() {
-        gtag('event', 'page_view', {
-          page_title: document.title,
-          page_location: window.location.href,
-          page_path: window.location.pathname
-        });
-      });
-
-      // 创建自定义事件来捕获所有类型的路由变化
-      ['pushState', 'replaceState'].forEach((type) => {
-        const original = window.history[type];
-        window.history[type] = function() {
-          const result = original.apply(this, arguments);
-          const event = new Event('locationchange');
-          window.dispatchEvent(event);
-          return result;
-        };
-      });
-
-      window.addEventListener('popstate', () => {
-        const event = new Event('locationchange');
-        window.dispatchEvent(event);
-      });
+      gtag('config', 'G-1CH7DQ3P91');
     </script>
     <link rel="icon" type="image/svg+xml" href="/logo.svg" />
     <link rel="apple-touch-icon" href="/logo.png" />
