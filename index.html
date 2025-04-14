@@ -9,7 +9,10 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'G-1YFRL1YWL1');
+      gtag('config', 'G-1YFRL1YWL1', {
+        page_path: window.location.pathname,
+        send_page_view: true
+      });
     </script>
     <link rel="icon" type="image/svg+xml" href="/logo.svg" />
     <link rel="apple-touch-icon" href="/logo.png" />
