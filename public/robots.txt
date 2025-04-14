@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://aimagicbox.online/sitemap.xml
+Sitemap: https://aimagicbox.com/sitemap.xml
 
 # Crawl-delay
 Crawl-delay: 10
