@@ -4,9 +4,6 @@ Allow: /
 # Sitemap
 Sitemap: https://aimagicbox.online/sitemap.xml
 
-# Crawl-delay
-Crawl-delay: 10
-
 # Disallow paths
 Disallow: /api/
 Disallow: /admin/
